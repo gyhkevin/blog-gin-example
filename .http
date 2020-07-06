@@ -1,0 +1,43 @@
+@url = http://localhost:8082/api/v1
+@baseUrl = http://localhost:8082
+
+### Get Tag List
+GET {{url}}/tags?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJwYXNzd29yZCI6InRlc3QxMjM0NTYiLCJleHAiOjE1OTM3NzI0MDcsImlzcyI6Imdpbi1ibG9nIn0.BLrweRnrbZm9wYrF4cLSpSIIZqxprhg07-zi5dvgd9Y
+
+### Add Tag
+POST {{url}}/tags?name=abc&state=1&created_by=test&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJwYXNzd29yZCI6InRlc3QxMjM0NTYiLCJleHAiOjE1OTM3NzI0MDcsImlzcyI6Imdpbi1ibG9nIn0.BLrweRnrbZm9wYrF4cLSpSIIZqxprhg07-zi5dvgd9Y
+Content-Type: application/x-www-form-urlencoded
+
+name=abc
+&state=1
+&created_by=test
+
+### Edit Tag
+PUT {{url}}/tags/4?name=abc1&state=0&modified_by=edit1&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJwYXNzd29yZCI6InRlc3QxMjM0NTYiLCJleHAiOjE1OTM3NzI0MDcsImlzcyI6Imdpbi1ibG9nIn0.BLrweRnrbZm9wYrF4cLSpSIIZqxprhg07-zi5dvgd9Y
+Content-Type: application/x-www-form-urlencoded
+
+### Delete Tag
+DELETE {{url}}/tags/2?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJwYXNzd29yZCI6InRlc3QxMjM0NTYiLCJleHAiOjE1OTM3NzI0MDcsImlzcyI6Imdpbi1ibG9nIn0.BLrweRnrbZm9wYrF4cLSpSIIZqxprhg07-zi5dvgd9Y
+
+
+### Add Article
+POST {{url}}/articles?tag_id=2&title=test2&desc=test-desc&content=test-content&created_by=test-created&state=1
+
+
+### Update Article
+PUT {{url}}/articles/1?tag_id=2&title=test1&desc=test-desc1&content=test-content1&modified_by=test-created&state=1
+
+### Get Articles
+GET {{url}}/articles
+
+### 
+GET {{url}}/articles?tag_id=0&state=999&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJwYXNzd29yZCI6InRlc3QxMjM0NTYiLCJleHAiOjE1OTM3NTUzODgsImlzcyI6Imdpbi1ibG9nIn0.wO-TJZqYDCj-SPar9ZnkQw3wWGLtPP00NhG92SPHWLM
+
+### Get One Article
+GET {{url}}/articles/2
+
+### Delete Article
+DELETE {{url}}/articles/1
+
+### 
+GET {{baseUrl}}/auth?username=test&password=test123456
