@@ -3,7 +3,7 @@ package api
 import (
 	"net/http"
 
-	"github.com/gyhkevin/go-gin-example/logging"
+	"github.com/gyhkevin/go-gin-example/pkg/logging"
 
 	"github.com/astaxie/beego/validation"
 	"github.com/gin-gonic/gin"

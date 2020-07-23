@@ -36,7 +36,7 @@ require (
 replace (
 	github.com/gyhkevin/go-gin-example/conf => /home/kevin/go/src/go-gin-example/conf
 	github.com/gyhkevin/go-gin-example/docs => /home/kevin/go/src/go-gin-example/docs
-	github.com/gyhkevin/go-gin-example/logging => /home/kevin/go/src/go-gin-example/logging
+	github.com/gyhkevin/go-gin-example/pkg/logging => /home/kevin/go/src/go-gin-example/pkg/logging
 	github.com/gyhkevin/go-gin-example/middleware => /home/kevin/go/src/go-gin-example/middleware
 	github.com/gyhkevin/go-gin-example/middleware/jwt => /home/kevin/go/src/go-gin-example/middleware/jwt
 	github.com/gyhkevin/go-gin-example/models => /home/kevin/go/src/go-gin-example/models

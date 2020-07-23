@@ -7,7 +7,7 @@ import (
 	"github.com/gyhkevin/go-gin-example/pkg/setting"
 )
 
-var jwtSecret = []byte(setting.JwtSercet)
+var jwtSecret = []byte(setting.AppSetting.JwtSercet)
 
 type Claims struct {
 	Username string `json:"username"`

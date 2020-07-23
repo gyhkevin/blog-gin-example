@@ -9,16 +9,22 @@ import (
 	"os/signal"
 	"time"
 
+	"github.com/gyhkevin/go-gin-example/models"
 	"github.com/gyhkevin/go-gin-example/routers"
 
+	"github.com/gyhkevin/go-gin-example/pkg/logging"
 	"github.com/gyhkevin/go-gin-example/pkg/setting"
 )
 
 func main() {
-	// endless.DefaultReadTimeOut = setting.ReadTimeout
-	// endless.DefaultWriteTimeOut = setting.WriteTimeout
+	setting.Setup()
+	models.Setup()
+	logging.Setup()
+
+	// endless.DefaultReadTimeOut = setting.ServerSetting.ReadTimeout
+	// endless.DefaultWriteTimeOut = setting.ServerSetting.WriteTimeout
 	// endless.DefaultMaxHeaderBytes = 1 << 20
-	// endPoint := fmt.Sprintf(":%d", setting.HTTPPORT)
+	// endPoint := fmt.Sprintf(":%d", setting.ServerSetting.HttpPort)
 
 	// server := endless.NewServer(endPoint, routers.InitRouter())
 	// server.BeforeBegin = func(add string) {
@@ -33,10 +39,10 @@ func main() {
 	router := routers.InitRouter()
 
 	s := &http.Server{
-		Addr:           fmt.Sprintf(":%d", setting.HTTPPORT),
+		Addr:           fmt.Sprintf(":%d", setting.ServerSetting.HttpPort),
 		Handler:        router,
-		ReadTimeout:    setting.ReadTimeout,
-		WriteTimeout:   setting.WriteTimeout,
+		ReadTimeout:    setting.ServerSetting.ReadTimeout,
+		WriteTimeout:   setting.ServerSetting.WriteTimeout,
 		MaxHeaderBytes: 1 << 20,
 	}
 

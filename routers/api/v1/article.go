@@ -8,9 +8,9 @@ import (
 
 	"github.com/astaxie/beego/validation"
 	"github.com/gin-gonic/gin"
-	"github.com/gyhkevin/go-gin-example/logging"
 	"github.com/gyhkevin/go-gin-example/models"
 	"github.com/gyhkevin/go-gin-example/pkg/e"
+	"github.com/gyhkevin/go-gin-example/pkg/logging"
 	"github.com/unknwon/com"
 )
 
@@ -69,7 +69,7 @@ func GetArticles(c *gin.Context) {
 	if !valid.HasErrors() {
 		code = e.SUCCESS
 
-		data["lists"] = models.GetArticles(util.GetPage(c), setting.PageSize, maps)
+		data["lists"] = models.GetArticles(util.GetPage(c), setting.AppSetting.PageSize, maps)
 		data["total"] = models.GetArticleTotal(maps)
 	} else {
 		for _, err := range valid.Errors {
