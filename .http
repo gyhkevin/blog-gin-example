@@ -39,5 +39,5 @@ GET {{url}}/articles/2
 ### Delete Article
 DELETE {{url}}/articles/1
 
-### 
+### Auth
 GET {{baseUrl}}/auth?username=test&password=test123456
