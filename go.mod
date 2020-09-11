@@ -34,14 +34,16 @@ require (
 )
 
 replace (
-	github.com/gyhkevin/go-gin-example/conf => /home/kevin/go/src/go-gin-example/conf
-	github.com/gyhkevin/go-gin-example/docs => /home/kevin/go/src/go-gin-example/docs
-	github.com/gyhkevin/go-gin-example/pkg/logging => /home/kevin/go/src/go-gin-example/pkg/logging
-	github.com/gyhkevin/go-gin-example/middleware => /home/kevin/go/src/go-gin-example/middleware
-	github.com/gyhkevin/go-gin-example/middleware/jwt => /home/kevin/go/src/go-gin-example/middleware/jwt
-	github.com/gyhkevin/go-gin-example/models => /home/kevin/go/src/go-gin-example/models
-	github.com/gyhkevin/go-gin-example/pkg/e => /home/kevin/go/src/go-gin-example/pkg/e
-	github.com/gyhkevin/go-gin-example/pkg/setting => /home/kevin/go/src/go-gin-example/pkg/setting
-	github.com/gyhkevin/go-gin-example/pkg/util => /home/kevin/go/src/go-gin-example/pkg/util
-	github.com/gyhkevin/go-gin-example/routers/api => /home/kevin/go/src/go-gin-example/routers/api
+	github.com/gyhkevin/go-gin-example/conf => /home/kevin/projects/go/go-gin-example/conf
+	github.com/gyhkevin/go-gin-example/docs => /home/kevin/projects/go/go-gin-example/docs
+	github.com/gyhkevin/go-gin-example/middleware => /home/kevin/projects/go/go-gin-example/middleware
+	github.com/gyhkevin/go-gin-example/middleware/jwt => /home/kevin/projects/go/go-gin-example/middleware/jwt
+	github.com/gyhkevin/go-gin-example/models => /home/kevin/projects/go/go-gin-example/models
+	github.com/gyhkevin/go-gin-example/pkg/e => /home/kevin/projects/go/go-gin-example/pkg/e
+	github.com/gyhkevin/go-gin-example/pkg/file => /home/kevin/projects/go/go-gin-example/pkg/file
+	github.com/gyhkevin/go-gin-example/pkg/logging => /home/kevin/projects/go/go-gin-example/pkg/logging
+	github.com/gyhkevin/go-gin-example/pkg/setting => /home/kevin/projects/go/go-gin-example/pkg/setting
+	github.com/gyhkevin/go-gin-example/pkg/upload => /home/kevin/projects/go/go-gin-example/pkg/upload
+	github.com/gyhkevin/go-gin-example/pkg/util => /home/kevin/projects/go/go-gin-example/pkg/util
+	github.com/gyhkevin/go-gin-example/routers/api => /home/kevin/projects/go/go-gin-example/routers/api
 )

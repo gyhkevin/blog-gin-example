@@ -20,6 +20,12 @@ func GetExt(filename string) string {
 func CheckNotExist(src string) bool {
 	_, err := os.Stat(src)
 
+	return os.IsNotExist(err)
+}
+
+func CheckPermission(src string) bool {
+	_, err := os.Stat(src)
+
 	return os.IsPermission(err)
 }
 
@@ -40,4 +46,13 @@ func MkDir(src string) error {
 	}
 
 	return nil
+}
+
+func Open(name string, flag int, perm os.FileMode) (*os.File, error) {
+	f, err := os.OpenFile(name, flag, perm)
+	if err != nil {
+		return nil, err
+	}
+
+	return f, nil
 }
